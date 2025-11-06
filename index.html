@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>VXD — Visuals By Daniel</title>
+  <style>
+    /* ======= COLORS ======= */
+    :root {
+      --warm-gold: #D4A373;
+      --teal-blue: #4A6B74;
+      --soft-beige: #EAE3D2;
+      --charcoal: #2E2E2E;
+      --faded-white: #F9F7F4;
+    }
+
+    /* ======= GENERAL ======= */
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: var(--charcoal);
+      color: var(--faded-white);
+      margin: 0;
+      padding: 0;
+      line-height: 1.7;
+    }
+
+    header {
+      text-align: center;
+      padding: 3rem 1rem;
+      background: linear-gradient(to bottom, rgba(46,46,46,0.7), rgba(46,46,46,0.9)),
+                  url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1600&q=80') center/cover;
+    }
+
+    header h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 3rem;
+      color: var(--warm-gold);
+      margin-bottom: 0.3rem;
+    }
+
+    header p {
+      font-size: 1.2rem;
+      color: var(--soft-beige);
+      font-style: italic;
+    }
+
+    nav {
+      text-align: center;
+      padding: 1rem 0;
+      background-color: #1f1f1f;
+    }
+
+    nav a {
+      color: var(--soft-beige);
+      text-decoration: none;
+      margin: 0 1rem;
+      font-weight: 500;
+    }
+
+    nav a:hover {
+      color: var(--warm-gold);
+    }
+
+    section {
+      padding: 3rem 1rem;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    h2 {
+      font-family: 'Cormorant Garamond', serif;
+      color: var(--warm-gold);
+      font-size: 2rem;
+      margin-bottom: 1rem;
+    }
+
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1rem;
+    }
+
+    .gallery img {
+      width: 100%;
+      border-radius: 8px;
+      transition: transform 0.3s;
+    }
+
+    .gallery img:hover {
+      transform: scale(1.05);
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+      width: 100%;
+      padding: 0.7rem;
+      margin-bottom: 1rem;
+      border: none;
+      border-radius: 4px;
+      background: var(--soft-beige);
+      color: var(--charcoal);
+    }
+
+    .contact-form button {
+      background: var(--teal-blue);
+      color: white;
+      border: none;
+      padding: 0.8rem 1.5rem;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    footer {
+      text-align: center;
+      padding: 2rem;
+      font-size: 0.9rem;
+      background-color: #1a1a1a;
+      color: var(--soft-beige);
+    }
+
+    .btn {
+      display: inline-block;
+      background: var(--warm-gold);
+      color: var(--charcoal);
+      padding: 0.8rem 1.5rem;
+      text-decoration: none;
+      border-radius: 5px;
+      margin-top: 1rem;
+      transition: 0.3s;
+    }
+
+    .btn:hover {
+      background: var(--teal-blue);
+      color: white;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>VXD — Visuals By Daniel</h1>
+    <p>See the world through my eyes.</p>
+  </header>
+
+  <nav>
+    <a href="#home">Home</a>
+    <a href="#gallery">Gallery</a>
+    <a href="#shop">Shop</a>
+    <a href="#about">About</a>
+    <a href="#contact">Contact</a>
+    <a href="#support">Support</a>
+  </nav>
+
+  <section id="home">
+    <h2>Welcome to VXD</h2>
+    <p>VXD — Visuals By Daniel is a cinematic, dreamy, and vintage-inspired visual art brand. Each photo captures emotion, texture, and timeless moments that invite you into another world. Explore prints, digital art, and custom commissions.</p>
+  </section>
+
+  <section id="gallery">
+    <h2>Gallery / Portfolio</h2>
+    <div class="gallery">
+      <img src="https://images.unsplash.com/photo-1519681393784-d120267933ba?auto=format&fit=crop&w=800&q=80" alt="Gallery 1">
+      <img src="https://images.unsplash.com/photo-1518837695005-2083093ee35b?auto=format&fit=crop&w=800&q=80" alt="Gallery 2">
+      <img src="https://images.unsplash.com/photo-1503264116251-35a269479413?auto=format&fit=crop&w=800&q=80" alt="Gallery 3">
+    </div>
+  </section>
+
+  <section id="shop">
+    <h2>Shop</h2>
+    <p>Purchase fine art prints, digital downloads, or image licenses.</p>
+    <a href="mailto:dan@example.com?subject=Photo%20Order%20Inquiry" class="btn">Inquire About Prints</a>
+  </section>
+
+  <section id="about">
+    <h2>About</h2>
+    <p>I'm Daniel, a photographer and artist capturing cinematic, human moments through a dreamy and vintage lens. My goal is to make people feel something real — nostalgia, calm, and wonder — through visual storytelling.</p>
+  </section>
+
+  <section id="contact">
+    <h2>Private Requests / Contact</h2>
+    <form class="contact-form" action="https://formspree.io/f/example" method="POST">
+      <input type="text" name="name" placeholder="Your name" required>
+      <input type="email" name="_replyto" placeholder="Your email" required>
+      <textarea name="message" rows="5" placeholder="Your message or commission request" required></textarea>
+      <button type="submit">Send</button>
+    </form>
+  </section>
+
+  <section id="support">
+    <h2>Support / Donate</h2>
+    <p>If you’d like to support my journey and future creative projects, you can donate or sponsor below.</p>
+    <a href="https://paypal.me/yourlink" class="btn">Support via PayPal</a>
+  </section>
+
+  <footer>
+    <p>© 2025 VXD — Visuals By Daniel. All rights reserved.</p>
+  </footer>
+</body>
+</html>
